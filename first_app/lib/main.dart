@@ -1,32 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:first_app/gradient_container.dart';
+
+// GradientContainer'ın tanımlı olduğu dosya içe aktarılıyor.
 
 void main() {
-  // main, smzde işlev adıdır
-
   runApp(
-    MaterialApp(
+    const MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.deepPurple,
-        body: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                Color.fromARGB(255, 60, 10, 148),
-                Color.fromARGB(255, 109, 23, 116),
-              ],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-            ),
-          ),
-          child: const Center(
-            child: Text('Hello World', style: TextStyle(
-              color: Colors.white,
-              fontSize: 28),
-              ),
-          ),
-        ),
+        // list olarak tanımlasaydık: body: GradientContainer([]);
+        body: GradientContainer(
+            Color.fromARGB(255, 60, 10, 148),
+            Color.fromARGB(
+                255, 109, 23, 116)), // Burada GradientContainer'ı kullanıyoruz
       ),
     ),
-  ); // sözde bir fonksiyondur
-  // MaterialApp --> Flutter'ın sağladığı widget'lardan biri
+  );
 }
