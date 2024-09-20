@@ -192,3 +192,4 @@ Statedul widget kullanırken her zaman 2 class çalışacağız.
 
 ## Generating Random Numbers
 
+![alt text](images/image-35.png) 
