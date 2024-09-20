@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:first_app/dice_roller.dart';
+
 // DART bir değişkende hangi türün saklanacağını bilir çünkü değişkene ait atadığınız değere bakar ve bu değer türünü kullanır
 
 // final diğer bir build-in (yerleşik) keyword ve bu veri container'ının yeni bir değer alamayacağı anlamına gelir
@@ -30,6 +32,7 @@ class GradientContainer extends StatelessWidget {
 
   final Color color1;
   final Color color2;
+  
 
   @override // statelessWidget tarafından beklenen bir metodu geçersiz kıldığınızı açıkça ortaya koyar
   Widget build(context) /*Widget build ögesinin dönüş tipidir */ {
@@ -43,10 +46,7 @@ class GradientContainer extends StatelessWidget {
         ),
       ),
       child: Center(
-        child: Image.asset(
-          'assets/images/dice-2.png',
-          width: 200,
-        ),
+        child: DiceRoller(),
       ),
     );
   }

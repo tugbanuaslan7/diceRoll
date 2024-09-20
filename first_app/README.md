@@ -129,3 +129,66 @@ Bu text'i burada kullanmıyoruz. Bunun yerine aşağıda hala sabit kodlanmış 
 ![alt text](images/image-23.png)  
 ya da   
 ![alt text](images/image-24.png)  
+
+
+
+## Displaying Images & Using Multiple Constructor Functions 
+Kodda görüntüleri kullanabilmek için pubspec.yaml dosyasına görüntüleri ekledik.  
+
+![alt text](images/image-25.png)  
+![alt text](images/image-26.png)  
+
+## Adding Buttons and Using Functions As Values
+
+Column widget, birden fazla widget'ı birbirinin üzerinde birden fazla alt öge olarak oluşturmanıza olanak sağlamak için vardır.  
+Aynı işlemi yatay olarak yan yana yapacak bir Row widhet'ı da vardır.  
+Zarın altına bir buton eklemek istiyoruz. Butonlar çok yaygın bir widget türüdür flutter üç farklı ana butonu destekler.  
+  
+
+
+```Flutter
+// Arka plan rengine ve hafif bir gölgeye sahip bir düğmeyi görüntülemek için burada elevated button vardır.
+ElevatedButton(onPressed: onPressed, child: child)
+```
+
+```Flutter
+// Arka plan rengi olmayan ancak kenarlığı olan bir düğmeyi görüntülemek için outliner buton vardır.
+OutlinedButton(onPressed: onPressed, child: child)
+```
+
+```Flutter
+// Bir metin olan bir düğmeyi görüntülemek için text düğmesi vardır.
+TextButton(onPressed: onPressed, child: child)
+```
+
+DART'taki fonksiyonlar da sadece nesnelerdir. Yani bir fonksiyon tanımlarsanız bir fonksiyonu değer olarak aktarabilirsiniz.
+
+Onpressed için 2 seçeneğimiz var.  
+Birinci seçenek fonksioyonu sadece yerinde tanımlarsınız.  
+İkinci seçenek. bir method tanımlamanızdır. 
+Methodun içine yazdığımız koda, bu butona bastığımızda ne yapmak istiyorsak onu yazabiliriz
+![alt text](images/image-27.png)  
+![alt text](images/image-28.png)  
+
+## Styling Button & Working with Padding 
+
+![alt text](images/image-29.png)  
+![alt text](images/image-30.png) 
+
+## How NOT To Build Interactive Widgets 
+
+butona tıkladığımda zarda bir değişiklik olmuyor çünkü durum bilgisi olmayan bir widget'ın içindeyiz.  
+
+![alt text](images/image-31.png) 
+
+## Introducing Stateful Widgets
+
+Stateful widget'lar içlerindeki durumu yönetmemize izin verir. State ise basitçe zaman içinde değişebilen ve işlenen kullanıcı arayüzünü etkilemesi gereken verilerdir.  
+Statedul widget kullanırken her zaman 2 class çalışacağız.
+
+![alt text](images/image-32.png) 
+![alt text](images/image-33.png) 
+![alt text](images/image-34.png) 
+
+## Generating Random Numbers
+
